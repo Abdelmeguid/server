@@ -1,5 +1,7 @@
 //packages
-const express = require("express");
+//below edit 1
+// const express = require("express");
+import express from 'express';
 const app = express();
 const cors = require("cors");
 app.use(cors());
@@ -49,4 +51,8 @@ const listening = function () {
 let d = new Date();
 let newDate = d.toDateString();
 console.log(newDate);
-app.listen(listening);
+//below edit 2
+// app.listen(OurPort, listening);
+app.listen(OurPort, () => {
+  console.log(`Server is running on port ${OurPort}`);
+});
