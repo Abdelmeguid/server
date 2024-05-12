@@ -29,7 +29,10 @@ const getAll = function (req, res) {
 };
 //get
 app.get("/get", getAll);
-const OurPort = 4000;
+// const OurPort = 4000;
+//edit 3
+const OurPort = process.env.PORT || 3000;
+
 const OurHostname = "127.0.0.1";
 const listening = function () {
   console.log(`my server work wellat http://${OurHostname}:${OurPort}/`);
