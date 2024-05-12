@@ -13,6 +13,13 @@ const MyPostData = function (req, res) {
   console.log(OurProjectData);
   res.status(200).send(OurProjectData);
 };
+
+////////////////////////
+//to see message on the browse
+app.get('/', (req, res) => {
+  res.send('Hello from the server!');
+});
+////////////////////////////
 //post
 app.post("/post", MyPostData);
 const getAll = function (req, res) {
