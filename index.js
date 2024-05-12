@@ -1,7 +1,5 @@
 //packages
-//below edit 1
-// const express = require("express");
-import express from 'express';
+const express = require("express");
 const app = express();
 const cors = require("cors");
 app.use(cors());
@@ -29,10 +27,7 @@ const getAll = function (req, res) {
 };
 //get
 app.get("/get", getAll);
-// const OurPort = 4000;
-//edit 3
-const OurPort = process.env.PORT || 3000;
-
+const OurPort = 4000;
 const OurHostname = "127.0.0.1";
 const listening = function () {
   console.log(`my server work wellat http://${OurHostname}:${OurPort}/`);
@@ -54,8 +49,4 @@ const listening = function () {
 let d = new Date();
 let newDate = d.toDateString();
 console.log(newDate);
-//below edit 2
-// app.listen(OurPort, listening);
-app.listen(OurPort, () => {
-  console.log(`Server is running on port ${OurPort}`);
-});
+app.listen(OurPort, listening);
